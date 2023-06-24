@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".ui.employee.EditAvailabilityFragment">
+
+    <Button android:id="@+id/button_off" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#7A796B" android:text="@string/o" app:backgroundTint="#7A796B"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.534" />
+
+    <Button android:id="@+id/button_both" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#3F51B5" android:text="@string/b" app:backgroundTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.534" />
+
+    <Button android:id="@+id/button_evening" android:layout_width="39dp"
+        android:layout_height="44dp" android:background="#FF9800" android:text="@string/e"
+        app:backgroundTint="#FF9800" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+
+    <Button android:id="@+id/button_day" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#96C9F1" android:text="@string/d" app:backgroundTint="#96C9F1"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.534" />
+
+    <Button android:id="@+id/button_tues" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/t" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.339" />
+
+    <Button android:id="@+id/button_wed" android:layout_width="44dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/w" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.339" />
+
+    <Button android:id="@+id/button_thurs" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/t" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.339" />
+
+    <Button android:id="@+id/button_fri" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/f" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.787" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.34" />
+
+    <Button android:id="@+id/button_sat" android:layout_width="39dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/s" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.339" />
+
+    <Button android:id="@+id/button_mon" android:layout_width="42dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/m" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.34" />
+
+    <Button android:id="@+id/button_sun" android:layout_width="42dp" android:layout_height="44dp"
+        android:background="#D6CFCF" android:text="@string/s" app:backgroundTint="#D6CFCF"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.34" />
+
+    <TextView android:id="@+id/employee_name" android:layout_width="169dp"
+        android:layout_height="35dp" android:text="employee_name" android:textAllCaps="true"
+        android:textStyle="bold" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <Button android:id="@+id/save_availability" android:layout_width="168dp"
+        android:layout_height="54dp" android:text="Save Availability"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.809" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

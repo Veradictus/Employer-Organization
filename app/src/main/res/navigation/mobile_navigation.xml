@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.app.borgapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_fragment_calendar_main"
+            app:destination="@id/fragment_calendar_main" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_schedule"
+            app:destination="@id/nav_schedule" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_employee"
+        android:name="com.app.borgapplication.ui.employee.EmployeeListFragment"
+        android:label="Employee"
+        tools:layout="@layout/fragment_employee_list" >
+        <action
+            android:id="@+id/action_nav_employee_to_nav_edit_employee"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_calendar_main"
+        android:name="com.app.borgapplication.ui.schedule.viewSchedule.ScheduleViewFragment"
+        android:label="Schedule Calendar"
+        tools:layout="@layout/fragment_nav_schedule">
+
+        <action
+            android:id="@+id/action_fragment_calendar_main_to_nav_schedule"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.app.borgapplication.ui.schedule.viewSchedule.ScheduleViewFragment"
+        android:label="Schedule Calendar"
+        tools:layout="@layout/fragment_nav_schedule">
+        <action
+            android:id="@+id/action_nav_schedule_to_nav_day"
+            app:destination="@id/nav_day" />
+        <action
+            android:id="@+id/action_nav_schedule_to_shiftInformationFragment"
+            app:destination="@id/shiftInformationFragment" />
+        <action
+            android:id="@+id/action_nav_schedule_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_schedule_to_editScheduleFragment"
+            app:destination="@id/editScheduleFragment" />
+        <action
+            android:id="@+id/action_nav_schedule_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_edit_employee"
+        android:name="com.app.borgapplication.ui.employee.EditEmployeeFragment"
+        android:label="@string/edit_employee"
+        tools:layout="@layout/fragment_edit_employee">
+        <action
+            android:id="@+id/action_nav_employee_to_add_availability"
+            app:destination="@id/nav_add_availability" />
+        <argument
+            android:name="employee_id"
+            app:argType="integer">
+        </argument>
+
+
+        <action
+            android:id="@+id/action_nav_edit_employee_to_nav_availability"
+            app:destination="@id/nav_add_availability" />
+        <action
+            android:id="@+id/action_nav_edit_employee_to_nav_add_employee"
+            app:destination="@id/nav_add_employee" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_edit_availability"
+        android:name="com.app.borgapplication.ui.employee.EditAvailabilityFragment"
+        android:label="Edit Availability"
+        tools:layout="@layout/fragment_edit_availability" />
+
+    <fragment
+        android:id="@+id/nav_add_employee"
+        android:name="com.app.borgapplication.ui.employee.AddEmployeeFragment"
+        android:label="Add Employee"
+        tools:layout="@layout/fragment_add_availability" >
+        <action
+            android:id="@+id/action_nav_add_employee_to_nav_add_availability"
+            app:destination="@id/nav_add_availability" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_availability"
+        android:name="com.app.borgapplication.ui.employee.AddAvailabilityFragment"
+        android:label="Add Availability"
+        tools:layout="@layout/fragment_add_availability" />
+
+    <fragment
+        android:id="@+id/nav_add_employee"
+        android:name="com.app.borgapplication.ui.employee.AddEmployeeFragment"
+        android:label="Add Employee"
+        tools:layout="@layout/fragment_add_availability"
+        tools:ignore="DuplicateIds" />
+    <fragment
+        android:id="@+id/nav_day"
+        android:name="com.app.borgapplication.ui.schedule.viewSchedule.ScheduleDayFragment"
+        android:label="Label"
+        tools:layout="@layout/fragment_nav_day" />
+    <fragment
+        android:id="@+id/shiftInformationFragment"
+        android:name="com.app.borgapplication.ui.schedule.viewSchedule.ShiftInformationFragment"
+        android:label="fragment_shift_information"
+        tools:layout="@layout/fragment_shift_information" >
+        <action
+            android:id="@+id/action_shiftInformationFragment_to_nav_schedule"
+            app:destination="@id/nav_schedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.app.borgapplication.ui.schedule.viewSchedule.CalendarFragment"
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_calendarFragment_to_shiftInformationFragment"
+            app:destination="@id/shiftInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editScheduleFragment"
+        android:name="com.app.borgapplication.ui.schedule.editSchedule.EditScheduleFragment"
+        android:label="Edit Schedule" >
+        <action
+            android:id="@+id/action_editScheduleFragment_to_nav_schedule"
+            app:destination="@id/nav_schedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.app.borgapplication.ui.schedule.reportSchedule.ReportFragment"
+        android:label="ReportFragment" >
+        <action
+            android:id="@+id/action_reportFragment_to_nav_schedule"
+            app:destination="@id/nav_schedule" />
+    </fragment>
+</navigation>

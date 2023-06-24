@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="20dp"
+    android:background="#000000"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="REPORT"
+                android:textColor="#8A8686"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/employee_month_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                android:text="Employees Left Behind: "
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/employee_error_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:listitem="@layout/employee_report_list_item">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/open_shift_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                android:text="Shift: Open not properly Scheduled"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/open_error_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:listitem="@layout/openshift_report_list_item">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/close_shift_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:text="Shift: Close not properly Scheduled" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/close_error_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:listitem="@layout/closeshift_report_list_item" />
+
+            <TextView
+                android:id="@+id/dayno_shift_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:text="Dates with no Shift: " />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/day_no_shift_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:listitem="@layout/openshift_report_list_item"
+                />
+
+            <Button
+                android:id="@+id/generate_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Export Schedule PDF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
